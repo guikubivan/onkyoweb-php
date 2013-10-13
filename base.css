@@ -1,0 +1,136 @@
+/*--------------------------Slider CSS starts here---------------------------*/
+.slider {
+	margin: 0.5em auto;
+	position: relative;
+	width: 300px;
+	height: 15px;
+	background: url(images/bg.png) 50% 50% repeat-x;
+}
+.slider img {
+	position: absolute;
+	top: 0px;
+	left: 85px;
+}
+.slider .left, .slider .right {
+	height: 12px;
+	width: 2px;
+	position: absolute;
+	top: 0px;
+}
+.slider .left {
+	left: 0px;
+	background: url(images/left.png) 0px 1px no-repeat;
+}
+.slider .right {
+	right: 0px;
+	background: url(images/right.png) 0px 1px no-repeat;
+}
+/*-------------------Main CSS starts here---------------------*/
+#apDiv3 {
+	position:absolute;
+	left:9px;
+	top:1051px;
+	width:228px;
+	height:118px;
+	z-index:1;
+}
+body {
+	background-color: #05467C;
+	padding-top: 0px;
+	padding-left: 0px;
+}
+#main_header {
+	background-image: url(images/header_bg.jpg);
+	background-repeat: no-repeat;
+	vertical-align: middle;
+}
+h1 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #09F;
+}
+.volume_cell {
+	vertical-align: top;
+	height: 60px;
+}
+.mode_cell {
+	height: 50px;
+	width: 80px;
+}
+.main_table {
+/*	position: absolute;*/
+	left: 0px;
+	top: 0px;
+}
+.header_cell {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #09F;
+	height: 22px;
+	font-weight: bold;
+	background-color: #036;
+	border-top-width: 15px;
+	border-top-style: solid;
+	border-top-color: #05467C;
+}
+#output1 {
+	font-size: 30px;
+	background-color: #9CF;
+	width: 95px;
+	font-family: Verdana, Geneva, sans-serif;
+	text-align: center;
+	margin-left: 12px;
+	height: 26px;
+}
+.source_buttons {
+	height: 70px;
+	width: 70px;
+	background-color: #05467C;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+.source_buttons2 {
+	height: 70px;
+	width: 140px;
+	background-color: #05467C;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+#sky_button {
+	background-image: url(images/sky.png);
+	background-repeat: no-repeat;
+}
+#sonos_button {
+	background-image: url(images/sonos.png);
+	background-repeat: no-repeat;
+}
+#oppo_button {
+	background-image: url(images/oppo.png);
+	background-repeat: no-repeat;
+}
+#ps3_button {
+	background-image: url(images/ps3.png);
+	background-repeat: no-repeat;
+}
+#pc_button {
+	background-image: url(images/pc.png);
+	background-repeat: no-repeat;
+}
+#network_button {
+	background-image: url(images/network.png);
+	background-repeat: no-repeat;
+}
+#power_button {
+	background-image: url(images/power.png);
+	background-repeat: no-repeat;
+}
+.mode_buttons {
+	height: 45px;
+	width: 70px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+}
