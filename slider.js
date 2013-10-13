@@ -30,21 +30,21 @@ function drawSliderByVal(slider) {
 	knob.style.left=x+"px";
 }
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-function setSliderByClientX(slider, clientX) {
+function setSliderByClientX(slider, clientX, action) {
 	var p=(clientX-slider.offsetLeft-15)/(slider.scrollWidth-30);
 	slider.val=(slider.max-slider.min)*p + slider.min;
 	if (slider.val>slider.max) slider.val=slider.max;
 	if (slider.val<slider.min) slider.val=slider.min;
 
 	drawSliderByVal(slider);
-	slider.onchange(slider.val, slider.num);
+	slider.onchange(slider.val, slider.num, action);
 }
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 function sliderClick(e) {
 	var el=sliderFromEvent(e);
 	if (!el) return;
 
-	setSliderByClientX(el, e.clientX);
+	//setSliderByClientX(el, e.clientX, "click");
 }
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 function sliderMouseMove(e) {
@@ -52,8 +52,15 @@ function sliderMouseMove(e) {
 	if (!el) return;
 	if (activeSlider<0) return;
 
-	setSliderByClientX(el, e.clientX);
+	setSliderByClientX(el, e.clientX, "drag");
 	stopEvent(e);
+}
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+function sliderMouseUp(e) {
+	var el=sliderFromEvent(e);
+	if (!el) return;
+
+	setSliderByClientX(el, e.clientX, "mouseup");
 }
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 function sliderFromEvent(e) {
@@ -115,5 +122,6 @@ function stopEvent(event) {
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 addAnEvent(window, 'load', attachSliderEvents);
 addAnEvent(document, 'mousemove', sliderMouseMove);
+addAnEvent(document, 'mouseup', sliderMouseUp);
 var activeSlider=-1;
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */

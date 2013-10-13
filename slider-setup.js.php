@@ -11,10 +11,16 @@ slider[1].val=0;
 slider[1].onchange=setBoxValue;
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-function setBoxValue(val, box) {
+function setBoxValue(val, box, action) {
     var b=document.getElementById('output'+box);
 	//val=Math.round(val*1000)/1000;
 	val=Math.round(val);
 	b.value=val;
+
+	if(action == "mouseup"){
+		var myForm = document.getElementById("main_form");
+		myForm.cmd_hidden.value = "volume";
+		myForm.submit();
+	}
 }
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */

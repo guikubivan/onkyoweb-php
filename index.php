@@ -16,12 +16,12 @@
 
 <body>
 
-
 <div>
   <img src="images/onkyo_logo2.gif" width="180" height="25" />
 </div>
-<form method="post" action="204.php">
 
+<form id="main_form" method="post" action="204.php">
+<input type="hidden" name="cmd_hidden" value="" />
 <table width="320" class="main_table" style="float:left">
   <tr>
     <td colspan="4" class="header_cell">SOURCE</td>
@@ -109,7 +109,7 @@
   </tr>
   <tr>
     <td colspan="2" class="volume_cell"><input name="volume" id="output1" readonly="readonly" /></td>
-    <td class="volume_cell"><button type="submit" name="cmd" value="volume" class="mode_buttons" >Set</button></td>
+    <td class="volume_cell" style="display:none"><button type="submit" name="cmd" value="volume" class="mode_buttons" >Set</button></td>
     <td>&nbsp;</td>
   </tr>
 </table>

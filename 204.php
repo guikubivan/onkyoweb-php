@@ -19,18 +19,20 @@ header("HTTP/1.0 204 No Response");
 	$volume = strtoupper (dechex ($volume));
 	if(strlen($volume)==1) $volume = "0".$volume;
 	$volume = "!1MVL".$volume;
-	//exit();
+	
+	$cmd = $_POST["cmd"];
+	if(empty($cmd)) $cmd = $_POST["cmd_hidden"];
 	//send a command to the amp if a button is pressed
-	if (isset ($_POST["cmd"])) {
-		if ($_POST["cmd"] == "volume") {
+	if (isset ($cmd)) {
+		if ($cmd == "volume") {
 			$var1 = $volume;
 			$task = send_cmd($var1, $fp, $debug);
 		}
-		elseif ($_POST["cmd"] == "status") {
+		elseif ($cmd == "status") {
 			$var2 = get_status("!1DIFQSTN", $fp, $debug);
 		}
 		else {
-			$var1 = $_POST["cmd"];
+			$var1 = $cmd;
 			$task = send_cmd($var1, $fp, $debug);
 		}
 	}
