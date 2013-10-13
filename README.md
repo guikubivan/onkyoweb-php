@@ -5,7 +5,9 @@ Onkyo remote web app using php backend
 
 Set-up
 ------
-Modify config.ini and update with the information for your receiver. You can also set the max volume here. Inf the future, I would like to implement a client config.
+Modify config.ini and update with the information for your receiver. You can also set the max volume here.
+
+In the future, I would like to implement a client config.
 
 
 Credits
