@@ -1,7 +1,9 @@
 onkyoweb-php
 ============
 
-Onkyo remote web app using php backend
+Onkyoweb remote app using php backend
+
+![onkyoweb remote app](/screenshot.png "Screenshot")
 
 Set-up
 ------
