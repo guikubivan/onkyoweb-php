@@ -16,12 +16,13 @@
 
 <body>
 
+
+<div>
+  <img src="images/onkyo_logo2.gif" width="180" height="25" />
+</div>
 <form method="post" action="204.php">
 
-<table width="320" class="main_table">
-  <tr>
-    <td height="63" colspan="4" id="main_header"><img src="images/onkyo_logo2.gif" width="180" height="25" /></td>
-  </tr>
+<table width="320" class="main_table" style="float:left">
   <tr>
     <td colspan="4" class="header_cell">SOURCE</td>
   </tr>
@@ -38,23 +39,6 @@
   <tr>
     <td><button type="submit" name="cmd" value="!1PWR00" class="source_buttons" id="power_button" ></button></td>
     <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td colspan="4" class="header_cell">VOLUME</td>
-  </tr>
-  <tr>
-    <td height="40" colspan="4">
-        <div class="slider" id="slider01">
-            <div class="left"></div>
-            <div class="right"></div>
-            <img src="images/knob.png" />
-        </div>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" class="volume_cell"><input name="volume" id="output1" readonly="readonly" /></td>
-    <td class="volume_cell"><button type="submit" name="cmd" value="volume" class="mode_buttons" >Set</button></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
@@ -107,6 +91,26 @@
     <td class="mode_cell"><!--<button type="submit" name="cmd" value="status" class="mode_buttons" >Status</button>--></td>
     <td class="mode_cell">&nbsp;</td>
     <td class="mode_cell">&nbsp;</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td colspan="4" class="header_cell">VOLUME</td>
+  </tr>
+  <tr>
+    <td height="40" colspan="4">
+        <div class="slider" id="slider01">
+            <div class="left"></div>
+            <div class="right"></div>
+            <img src="images/knob.png" />
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="volume_cell"><input name="volume" id="output1" readonly="readonly" /></td>
+    <td class="volume_cell"><button type="submit" name="cmd" value="volume" class="mode_buttons" >Set</button></td>
+    <td>&nbsp;</td>
   </tr>
 </table>
 </form>
