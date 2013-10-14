@@ -22,25 +22,45 @@
 
 <form id="main_form" method="post" action="204.php">
 <input type="hidden" name="cmd_hidden" value="" />
-<table width="320" class="main_table" style="float:left">
+<table>
   <tr>
-    <td colspan="4" class="header_cell">SOURCE</td>
+    <td colspan="3" class="header_cell">SOURCE</td>
   </tr>
   <tr>
     <td><button type="submit" name="cmd" value="!1SLI23" class="source_buttons" id="sonos_button" ></button></td>
-    <td colspan="2" align="center"><button type="submit" name="cmd" value="!1SLI01" class="source_buttons2" id="sky_button" ></button></td>
+    <td align="center"><button type="submit" name="cmd" value="!1SLI01" class="source_buttons2" id="sky_button" ></button></td>
     <td><button type="submit" name="cmd" value="!1SLI02" class="source_buttons" id="ps3_button" ></button></td>
   </tr>
   <tr>
     <td><button type="submit" name="cmd" value="!1SLI00" class="source_buttons" id="pc_button" ></button></td>
-    <td colspan="2" align="center"><button type="submit" name="cmd" value="!1SLI10" class="source_buttons2" id="oppo_button" ></button></td>
+    <td align="center"><button type="submit" name="cmd" value="!1SLI10" class="source_buttons2" id="oppo_button" ></button></td>
     <td><button type="submit" name="cmd" value="!1SLI27" class="source_buttons" id="network_button" ></button></td>
   </tr>
   <tr>
+    <td><button type="submit" name="cmd" value="!1SLI24" class="mode_buttons" >FM</button></td>
     <td><button type="submit" name="cmd" value="!1PWR00" class="source_buttons" id="power_button" ></button></td>
     <td>&nbsp;</td>
-    <td>&nbsp;</td>
   </tr>
+</table>
+<table>
+  <tr>
+    <td colspan="2" class="header_cell">VOLUME</td>
+  </tr>
+  <tr>
+    <td height="40" colspan="2">
+      <div class="slider" id="slider01">
+        <div class="left"></div>
+        <div class="right"></div>
+        <img src="images/knob.png" />
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td class="volume_cell"><input name="volume" id="output1" readonly="readonly" /></td>
+    <td class="volume_cell" style="display:none"><button type="submit" name="cmd" value="volume" class="mode_buttons" >Set</button></td>
+  </tr>
+</table>
+<table>
   <tr>
     <td colspan="4" class="header_cell">SOUND MODE</td>
   </tr>
@@ -74,6 +94,8 @@
     <td class="mode_cell"><button type="submit" name="cmd" value="!1LMD0A" class="mode_buttons" >Studio-Mix</button></td>
     <td class="mode_cell">&nbsp;</td>
   </tr>
+</table>
+<table>
   <tr>
     <td colspan="4" class="header_cell">AUDIO INPUT</td>
   </tr>
@@ -83,6 +105,8 @@
     <td class="mode_cell"><button type="submit" name="cmd" value="!1SLA05" class="mode_buttons" >Digital</button></td>
     <td class="mode_cell">&nbsp;</td>
   </tr>
+</table>
+<table>
   <tr>
     <td colspan="4" class="header_cell">HDMI OUTPUT</td>
   </tr>
@@ -97,26 +121,6 @@
     <td class="mode_cell"><!--<button type="submit" name="cmd" value="status" class="mode_buttons" >Status</button>--></td>
     <td class="mode_cell">&nbsp;</td>
     <td class="mode_cell">&nbsp;</td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <td colspan="4" class="header_cell">VOLUME</td>
-  </tr>
-  <tr>
-    <td height="40" colspan="4">
-        <div class="slider" id="slider01">
-            <div class="left"></div>
-            <div class="right"></div>
-            <img src="images/knob.png" />
-        </div>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" class="volume_cell"><input name="volume" id="output1" readonly="readonly" /></td>
-    <td class="volume_cell" style="display:none"><button type="submit" name="cmd" value="volume" class="mode_buttons" >Set</button></td>
-    <td>&nbsp;</td>
   </tr>
 </table>
 </form>

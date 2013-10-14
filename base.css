@@ -57,11 +57,11 @@ h1 {
 	height: 50px;
 	width: 80px;
 }
-.main_table {
-/*	position: absolute;*/
+/*.main_table {
+	position: absolute;
 	left: 0px;
 	top: 0px;
-}
+}*/
 .header_cell {
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 12px;
@@ -133,4 +133,8 @@ h1 {
 	width: 70px;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 10px;
+}
+table {
+    width: 320px;
+    float: left;
 }
