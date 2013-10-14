@@ -69,6 +69,12 @@
     <td class="mode_cell">&nbsp;</td>
   </tr>
   <tr>
+    <td class="mode_cell"><button type="submit" name="cmd" value="!1LMD08" class="mode_buttons" >Orchestra </button></td>
+    <td class="mode_cell"><button type="submit" name="cmd" value="!1LMD09" class="mode_buttons" >Unplugged</button></td>
+    <td class="mode_cell"><button type="submit" name="cmd" value="!1LMD0A" class="mode_buttons" >Studio-Mix</button></td>
+    <td class="mode_cell">&nbsp;</td>
+  </tr>
+  <tr>
     <td colspan="4" class="header_cell">AUDIO INPUT</td>
   </tr>
   <tr>
