@@ -1,5 +1,5 @@
 <?php
-include "load_config.php";
+include "../load_config.php";
 ?>
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
