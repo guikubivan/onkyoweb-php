@@ -57,6 +57,10 @@ h1 {
 	height: 50px;
 	width: 80px;
 }
+.mode_cell img {
+	opacity: 0.5;
+}
+
 /*.main_table {
 	position: absolute;
 	left: 0px;
