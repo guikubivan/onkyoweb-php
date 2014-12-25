@@ -1,9 +1,8 @@
 <?php
-
+$return_output = false;
 // trick browser into staying on same page
 $ibrowser = strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
 if ($ibrowser == false) {
-header("HTTP/1.0 204 No Response");
 }
 
 	include "load_config.php";
@@ -33,13 +32,18 @@ header("HTTP/1.0 204 No Response");
 		}
 		else {
 			$var1 = $cmd;
-			$task = send_cmd($var1, $fp, $debug);
+			if((strpos($cmd,'DOWN') !== false) || (strpos($cmd, 'UP') !== false)){
+				$task = get_status($var1, $fp, $debug);
+				//$return_output=true;
+			}else{
+                        	$task = send_cmd($var1, $fp, $debug);
+                        	//$volume = "!1MVLQSTN";
+			}
 		}
 	}
 	else {
 		$var1 = "Not Set";
 	}
-
 	fclose($fp);
 
 
@@ -70,9 +74,7 @@ header("HTTP/1.0 204 No Response");
 		return $status;
 	}
 
-?>
-
-<?
+if(!$return_output) header("HTTP/1.0 204 No Response");
 
 if ($ibrowser == true) {
 print "<html>
@@ -84,4 +86,7 @@ print "<html>
 </html>";
 }
 
+if($return_output){
+  print $task;
+}
 ?>

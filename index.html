@@ -58,8 +58,20 @@
     </td>
   </tr>
   <tr>
-    <td class="volume_cell"><input name="volume" id="output1" readonly="readonly" /></td>
+    <td class="volume_cell"i style="width: 100%">
+      <input name="volume" id="output1" readonly="readonly" />
+      <div style="float:right; text-align: right">
+      <button type="submit" name="cmd" value="!1MVLDOWN" class="mode_buttons" >-</button>
+      <button type="submit" name="cmd" value="!1MVLUP" class="mode_buttons" >+</button>
+      </div>
+    </td>
     <td class="volume_cell" style="display:none"><button type="submit" name="cmd" value="volume" class="mode_buttons" >Set</button></td>
+  </tr>
+  <tr>
+    <td style="text-align:right">
+        <button type="submit" name="cmd" value="!1PRSDOWN" class="mode_buttons" >Tuner -</button> 
+        <button type="submit" name="cmd" value="!1PRSUP" class="mode_buttons" >Tuner +</button> 
+    <td>
   </tr>
 </table>
 <table>
